@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='UTF-8'>
+  <title>Power Moves</title>
+</head>
+
+<body>
+  <p id="move" class="move"></p>
+  <script>
+    var moves = [
+      { url: "https://twitter.com/fioroco/status/585905421946335232",
+        text: "considering eating the foot-tall chocolate bunny from the office kitchen during this meeting as a power move" },
+      { url: "https://twitter.com/fioroco/status/586273521606795266",
+        text: "considering not muting the rihanna that will probably blast from my laptop when i open it in this meeting as a power move" },
+      { url: "https://twitter.com/fioroco/status/590521105678467072",
+        text: "considering making a friendship bracelet in this meeting and putting it on my own wrist when i finish as a power move"}
+    ];
+  </script>
+  <script src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js'></script>
+  <script>
+    var move = _.sample(moves), $el = $('#move');
+    $el.text(move.text);
+    $el.on('click', function () {
+      window.location = move.url;
+    });
+  </script>
+</body>
+</html>
