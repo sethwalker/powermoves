@@ -40,14 +40,18 @@
       <p id="chocolate-bunny" class="move"><a href="https://twitter.com/fioroco/status/585905421946335232">considering eating the foot-tall chocolate bunny from the office kitchen during this meeting as a power move</a></p>
       <p id="rihanna" class="move"><a href="https://twitter.com/fioroco/status/586273521606795266">considering not muting the rihanna that will probably blast from my laptop when i open it in this meeting as a power move</a></p>
       <p id="friendship-bracelet" class="move"><a href="https://twitter.com/fioroco/status/590521105678467072">considering making a friendship bracelet in this meeting and putting it on my own wrist when i finish as a power move</a></p>
+      <p id="tuple" class="move"><a href="https://twitter.com/fioroco/status/616710317758779392">always pronouncing "tuple" the opposite of however you pronounce it as a power move</a></p>
     </div>
   </div>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
   <script>
-    function getRandomInt(min, max) {
-      return Math.floor(Math.random() * (max - min)) + min;
-    }
-    $(["#chocolate-bunny", "#rihanna", "#friendship-bracelet"][getRandomInt(0,3)]).show();
+    (function() {
+      function getRandomInt(min, max) {
+	return Math.floor(Math.random() * (max - min)) + min;
+      }
+      var powermoves = ["#chocolate-bunny", "#rihanna", "#friendship-bracelet", "#tuple"];
+      $(powermoves[getRandomInt(0,powermoves.length)]).show();
+    })();
   </script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
